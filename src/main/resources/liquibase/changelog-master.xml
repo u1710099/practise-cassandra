@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001
+      author: gulbakhor
+      changes:
+        - sqlFile:
+            path: liquibase/changelog/001-add-user_table_by_gulbakhor.cql
+            splitStatements: false
+            stripComments: true
+        - sqlFile:
+            path: liquibase/changelog/003-create-state_by_lang_view.cql
+            splitStatements: false
+            stripComments: true
