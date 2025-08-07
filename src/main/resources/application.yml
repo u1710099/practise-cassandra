@@ -1,1 +1,14 @@
-spring.application.name=practise-cassandra
+spring:
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.data.cassandra.CassandraReactiveDataAutoConfiguration
+  liquibase:
+    enabled: false
+    change-log: classpath:liquibase/changelog-master.xml
+  cassandra:
+    contact-points: cassandra
+    port: 9042
+    keyspace-name: my_keyspace
+    local-datacenter: datacenter1  # Confirm this with command below
+    schema-action: none  # Don't auto-create schema if using Liquibase
+
+

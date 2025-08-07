@@ -1,13 +1,12 @@
-databaseChangeLog:
-  - changeSet:
-      id: 001
-      author: gulbakhor
-      changes:
-        - sqlFile:
-            path: liquibase/changelog/001-add-user_table_by_gulbakhor.cql
-            splitStatements: false
-            stripComments: true
-        - sqlFile:
-            path: liquibase/changelog/003-create-state_by_lang_view.cql
-            splitStatements: false
-            stripComments: true
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.4.xsd">
+
+    <changeSet id="001" author="gulbakhor">
+        <sqlFile path="/changelog/001-add-user_table_by_gulbakhor.cql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+</databaseChangeLog>
